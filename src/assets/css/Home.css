@@ -1,0 +1,108 @@
+.home {
+    position: relative;
+      display: flex;
+      padding: 90px 0 200px;
+      height: 545px;
+      width: inherit;
+      justify-content: space-evenly;
+  }
+  
+  .background-home {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 90px;
+  }
+  
+  .background-home::before {
+    content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url(../images/home.png);
+      background-position: 50%;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+  }
+  
+  .home-text {
+    width: 40%;
+    height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      padding: 76px 0px;
+      color: white;
+  }
+  
+  .home-text h1 {
+    font-size: 44px;
+  }
+
+  .home-text p {
+    font-size: 20px;
+  }
+  
+  .home-text button {
+    width: 50%;
+    font-size: 20px;
+      padding: 15px;
+      border-radius: 25px;
+      color: white;
+      border: none;
+      background: none;
+      cursor: pointer;
+      background-color: #2C2C68;
+      filter: brightness(.8);
+      transition: all 0.3s;
+  }
+
+  .home-text button a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .home-text button:hover {
+    box-shadow: 0 8px 10px rgba(0, 0, 0, .8);
+      transform: translateY(-4px);
+      filter: brightness(1);
+      color: white;
+  }
+
+  #vertical-slider {
+    overflow: hidden;
+    height: 790px;
+    position: sticky;
+    top: 0;
+  }
+  
+  #vertical-slider .container-slides {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: auto;
+    align-items: center;
+    width: 350px;
+    animation: vertical-slider;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 25s;
+  }
+  
+  #vertical-slider .container-slides:hover {
+    cursor: pointer;
+    animation-play-state: paused;
+  }
+  
+  #vertical-slider .img-scroll-slider {
+    width: 350px;
+    height: 350px;
+  }
+
+  @keyframes vertical-slider {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(calc(-350px * 7 + 230px)); } /* Desplazamiento total para 6 imágenes */
+}

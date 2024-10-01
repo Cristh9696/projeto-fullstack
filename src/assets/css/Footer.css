@@ -1,0 +1,41 @@
+footer {
+    height: auto;
+    background-color: black;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.social-media {
+    padding: 10px;
+    font-size: 40px;
+    color: white;
+    width: 70%;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+}
+
+.facebook, .twitter, .instagram, .whatsapp {
+    transition: all .4s;
+}
+
+.facebook:hover {
+    color: #395693;
+    cursor: pointer;
+}
+
+.twitter:hover {
+    color: #1D9CEB;
+    cursor: pointer;
+}
+
+.instagram:hover {
+    color: #CE2987;
+    cursor: pointer;
+}
+
+.whatsapp:hover {
+    color: #45C153;
+    cursor: pointer;
+}
